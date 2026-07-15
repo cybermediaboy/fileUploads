@@ -24,7 +24,7 @@
   "aligned_core": {
     "file": "tw_macro_aligned_core.csv",
     "bars": 4000,
-    "columns": 39,
+    "columns": 40,
     "date_start": "2026-04-22",
     "date_end": "2026-07-14",
     "families_included": [
@@ -42,7 +42,7 @@
       "GrabDiag",
       "Bottoms"
     ],
-    "note": "Core dataset corrected to include TKBY contango/basis fields and M-KF fast velocity/peak fields for 24h family and fast-velocity testing."
+    "note": "Core dataset includes explicit VIX Contango Slope (%) = (VIX Long - VIX Short) / VIX Short * 100, plus TKBY price-zone geometry and M-KF velocity/peak fields."
   },
   "always_null_cols": [
     "H_total (x100)",
