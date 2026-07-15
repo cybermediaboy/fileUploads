@@ -24,11 +24,25 @@
   "aligned_core": {
     "file": "tw_macro_aligned_core.csv",
     "bars": 4000,
-    "columns": 27,
+    "columns": 39,
     "date_start": "2026-04-22",
     "date_end": "2026-07-14",
-    "families_included": ["InflHedge", "PriceVsVIX", "FlashZ"],
-    "families_excluded": ["MacroOsc", "MKF", "TKBY", "MacroVol", "MoCS", "MDLE", "GrabDiag", "Bottoms"]
+    "families_included": [
+      "InflHedge",
+      "PriceVsVIX",
+      "FlashZ",
+      "M-KF",
+      "TKBY"
+    ],
+    "families_excluded": [
+      "MacroOsc",
+      "MacroVol",
+      "MoCS",
+      "MDLE",
+      "GrabDiag",
+      "Bottoms"
+    ],
+    "note": "Core dataset corrected to include TKBY contango/basis fields and M-KF fast velocity/peak fields for 24h family and fast-velocity testing."
   },
   "always_null_cols": [
     "H_total (x100)",
@@ -39,16 +53,49 @@
     "Macro Velocity (vis)"
   ],
   "indicator_families": {
-    "InflHedge": {"first_valid_bar": 1605, "first_valid_date": "2024-02-03"},
-    "MacroOsc":  {"first_valid_bar": 41429, "first_valid_date": "2026-05-13"},
-    "PriceVsVIX":{"first_valid_bar": 99,   "first_valid_date": "2024-01-03"},
-    "FlashZ":    {"first_valid_bar": 104,  "first_valid_date": "2024-01-03"},
-    "MKF":       {"first_valid_bar": 41628, "first_valid_date": "2026-05-17"},
-    "TKBY":      {"first_valid_bar": 41627, "first_valid_date": "2026-05-17"},
-    "MacroVol":  {"first_valid_bar": 41730, "first_valid_date": "2026-05-19"},
-    "MoCS":      {"first_valid_bar": 42205, "first_valid_date": "2026-05-29"},
-    "MDLE":      {"first_valid_bar": 41854, "first_valid_date": "2026-05-21"},
-    "GrabDiag":  {"first_valid_bar": null,  "first_valid_date": "ALL ZERO"},
-    "Bottoms":   {"first_valid_bar": 22072, "first_valid_date": "2025-04-04"}
+    "InflHedge": {
+      "first_valid_bar": 1605,
+      "first_valid_date": "2024-02-03"
+    },
+    "MacroOsc": {
+      "first_valid_bar": 41429,
+      "first_valid_date": "2026-05-13"
+    },
+    "PriceVsVIX": {
+      "first_valid_bar": 99,
+      "first_valid_date": "2024-01-03"
+    },
+    "FlashZ": {
+      "first_valid_bar": 104,
+      "first_valid_date": "2024-01-03"
+    },
+    "MKF": {
+      "first_valid_bar": 41628,
+      "first_valid_date": "2026-05-17"
+    },
+    "TKBY": {
+      "first_valid_bar": 41627,
+      "first_valid_date": "2026-05-17"
+    },
+    "MacroVol": {
+      "first_valid_bar": 41730,
+      "first_valid_date": "2026-05-19"
+    },
+    "MoCS": {
+      "first_valid_bar": 42205,
+      "first_valid_date": "2026-05-29"
+    },
+    "MDLE": {
+      "first_valid_bar": 41854,
+      "first_valid_date": "2026-05-21"
+    },
+    "GrabDiag": {
+      "first_valid_bar": null,
+      "first_valid_date": "ALL ZERO"
+    },
+    "Bottoms": {
+      "first_valid_bar": 22072,
+      "first_valid_date": "2025-04-04"
+    }
   }
 }
