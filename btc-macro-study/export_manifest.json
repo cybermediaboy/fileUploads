@@ -1,26 +1,54 @@
 {
-  "export_timestamp": "2026-07-15T08:30:00+00:00",
+  "export_timestamp": "2026-07-14T17:00:00Z",
   "source_file": "chart_data_2026-07-14.csv",
   "chart_url": "https://www.tradingview.com/chart/LOHaz9j1/",
   "symbol": "BTCUSDT.P",
   "exchange": "BINANCE",
   "timeframe": "30m",
   "timezone": "UTC",
-  "raw": {"file": "tw_macro_raw.csv", "bars": 44431, "columns": 82, "date_start": "2024-01-01", "date_end": "2026-07-14"},
-  "aligned_full": {"file": "tw_macro_aligned_full.csv", "bars": 2226, "columns": 82, "date_start": "2026-05-29", "date_end": "2026-07-14", "limiting_family": "MoCS (first valid 2026-05-29)"},
-  "aligned_core": {"file": "tw_macro_aligned_core.csv", "bars": 4000, "columns": 30, "date_start": "2026-04-22", "date_end": "2026-07-14", "families_included": ["InflHedge", "PriceVsVIX", "FlashZ"], "exclusion_reason": "3M-era indicators valid from 2026-05-17 only"},
-  "always_null_cols": ["H_total (x100)", "DIAG.REGIME_A [btc_pred|mocs_str|mocs|z_vix|z_dxy|z_usdjpy]", "DIAG.REGIME_B [z_es|impl|impl_raw|velo|mas|beta_v]", "DIAG.REGIME_C [beta_h|beta_b|dir_v|dir_h|dir_b|lag_v]", "DIAG.REGIME_D [lag_h|lag_b|nu_v|nu_h|nu_b|SSS]", "Macro Velocity (vis)"],
+  "raw": {
+    "file": "tw_macro_raw.csv",
+    "bars": 44431,
+    "columns": 82,
+    "date_start": "2024-01-01",
+    "date_end": "2026-07-14"
+  },
+  "aligned_full": {
+    "file": "tw_macro_aligned_full.csv",
+    "bars": 2226,
+    "columns": 87,
+    "date_start": "2026-05-29",
+    "date_end": "2026-07-14",
+    "limiting_family": "MoCS (first valid: 2026-05-29)"
+  },
+  "aligned_core": {
+    "file": "tw_macro_aligned_core.csv",
+    "bars": 4000,
+    "columns": 27,
+    "date_start": "2026-04-22",
+    "date_end": "2026-07-14",
+    "families_included": ["InflHedge", "PriceVsVIX", "FlashZ"],
+    "families_excluded": ["MacroOsc", "MKF", "TKBY", "MacroVol", "MoCS", "MDLE", "GrabDiag", "Bottoms"]
+  },
+  "always_null_cols": [
+    "H_total (x100)",
+    "DIAG.REGIME_A [btc_pred|mocs_str|mocs|z_vix|z_dxy|z_usdjpy]",
+    "DIAG.REGIME_B [z_es|impl|impl_raw|velo|mas|beta_v]",
+    "DIAG.REGIME_C [beta_h|beta_b|dir_v|dir_h|dir_b|lag_v]",
+    "DIAG.REGIME_D [lag_h|lag_b|nu_v|nu_h|nu_b|SSS]",
+    "Macro Velocity (vis)"
+  ],
   "indicator_families": {
-    "PriceVsVIX":  {"entity_id": "Pb4Rzx", "first_valid_bar": 99,    "first_valid_date": "2024-01-03", "repainting": "LOW"},
-    "InflHedge":   {"entity_id": "VRzezH", "first_valid_bar": 1605,  "first_valid_date": "2024-02-03", "repainting": "UNKNOWN"},
-    "FlashZ":      {"entity_id": "MCkg7B", "first_valid_bar": 104,   "first_valid_date": "2024-01-03", "repainting": "NONE"},
-    "TKBY":        {"entity_id": "VZWcOf", "first_valid_bar": 41627, "first_valid_date": "2026-05-17", "repainting": "UNKNOWN"},
-    "MacroVol":    {"entity_id": "VZWcOf", "first_valid_bar": 41730, "first_valid_date": "2026-05-19", "repainting": "UNKNOWN"},
-    "MKF":         {"entity_id": "CatTZA", "first_valid_bar": 41628, "first_valid_date": "2026-05-17", "repainting": "UNKNOWN"},
-    "MacroOsc":    {"entity_id": "CatTZA", "first_valid_bar": 41429, "first_valid_date": "2026-05-13", "repainting": "UNKNOWN"},
-    "MoCS":        {"entity_id": "CatTZA", "first_valid_bar": 42205, "first_valid_date": "2026-05-29", "repainting": "UNKNOWN", "note": "binding constraint for aligned_full"},
-    "MDLE":        {"entity_id": "CatTZA", "first_valid_bar": 41854, "first_valid_date": "2026-05-21", "repainting": "UNKNOWN"},
-    "GrabDiag":    {"entity_id": "CatTZA", "first_valid_bar": null,  "first_valid_date": null, "note": "all-zero across all bars"},
-    "Bottoms":     {"entity_id": "Pb4Rzx", "first_valid_bar": 22072, "first_valid_date": "2025-04-04", "repainting": "LOW", "note": "sparse events"}
+    "InflHedge": {"first_valid_bar": 1605, "first_valid_date": "2024-02-03"},
+    "MacroOsc":  {"first_valid_bar": 41429, "first_valid_date": "2026-05-13"},
+    "PriceVsVIX":{"first_valid_bar": 99,   "first_valid_date": "2024-01-03"},
+    "FlashZ":    {"first_valid_bar": 104,  "first_valid_date": "2024-01-03"},
+    "MKF":       {"first_valid_bar": 41628, "first_valid_date": "2026-05-17"},
+    "TKBY":      {"first_valid_bar": 41627, "first_valid_date": "2026-05-17"},
+    "MacroVol":  {"first_valid_bar": 41730, "first_valid_date": "2026-05-19"},
+    "MoCS":      {"first_valid_bar": 42205, "first_valid_date": "2026-05-29"},
+    "MDLE":      {"first_valid_bar": 41854, "first_valid_date": "2026-05-21"},
+    "GrabDiag":  {"first_valid_bar": null,  "first_valid_date": "ALL ZERO"},
+    "Bottoms":   {"first_valid_bar": 22072, "first_valid_date": "2025-04-04"}
   }
 }
